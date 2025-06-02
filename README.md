@@ -10,7 +10,7 @@
 | Auth       | Clerk.dev                     |
 | Backend    | FastAPI                       |
 | AI Engine  | OpenAI GPT / Local LLMs       |
-| Database   | PostgreSQL + SQLAlchemy       |
+| Database   | SQLite + SQLAlchemy           |
 | DevOps     | Docker, Railway / Vercel      |
 
 ---
