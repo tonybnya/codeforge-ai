@@ -1,9 +1,13 @@
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import { ClerkProviderWithRoutes } from "./auth/ClerkProviderWithRoutes.jsx";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-      <h1 class="text-3xl font-bold underline">    Hello world!  </h1>
-  )
-}
+    <ClerkProviderWithRoutes>
+      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    </ClerkProviderWithRoutes>
+  );
+};
 
-export default App
+export default App;
