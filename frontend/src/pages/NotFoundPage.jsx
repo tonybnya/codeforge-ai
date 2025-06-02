@@ -1,9 +1,9 @@
 import bg from "/bg.png";
-import logo from "/challenge.svg";
+import { motion } from "framer-motion";
 
 const NotFoundPage = () => {
   return (
-    <div className="min-h-screen flex text-white">
+    <div className="min-h-screen flex text-white bg-[#0a0e17]">
       <div className="w-1/2 h-screen">
         <img
           src={bg}
@@ -14,12 +14,18 @@ const NotFoundPage = () => {
 
       <div className="w-1/2 flex flex-col justify-between max-lg:justify-center items-center p-8 bg-black min-h-screen">
         <div className="flex flex-col items-center gap-3 mb-12">
-          <img
-            src={logo}
-            className="h-12 w-12 max-lg:w-10 max-lg:h-10 text-primary"
-          />
-          <span className="text-4xl max-lg:text-lg font-bold text-[#602f32] tracking-tight">
-            Coding Challenges
+          <motion.div
+            initial={{ rotate: -10 }}
+            animate={{ rotate: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-[#1ba94c] text-2xl font-bold"
+          >
+            &lt;/&gt;
+          </motion.div>
+          <span className="text-4xl max-lg:text-lg font-bold tracking-tight">
+            <h1 className="text-xl font-bold">
+              CodeForge<span className="text-[#1ba94c]">AI</span>
+            </h1>
           </span>
         </div>
 
@@ -39,7 +45,7 @@ const NotFoundPage = () => {
 
           <button
             size="lg"
-            className="px-6 py-2 rounded-md bg-[#602f32] text-white hover:bg-[#602f32]/50 hover:scale-105"
+            className="px-6 py-2 rounded-md bg-[#1ba94c] text-white hover:bg-[#1ba94c]/50 hover:scale-105"
           >
             <a
               href="/"
@@ -52,7 +58,7 @@ const NotFoundPage = () => {
           </button>
         </div>
 
-        <div className="mt-12 text-[#8f7d5e] text-sm font-bold">
+        <div className="mt-12 text-[#1ba94c]/50 text-sm font-bold">
           <span>Error Code 404</span>
         </div>
       </div>
