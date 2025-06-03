@@ -1,32 +1,5 @@
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import FeatureCard from "./FeatureCard.jsx";
 import { Code, Layers, Zap, Globe, BookOpen, Award } from "lucide-react";
-
-const FeatureCard = ({ icon, title, description = "" }) => {
-  return (
-    <Card className="bg-zinc-900 border-zinc-800 hover:border-green-500/50 transition-all duration-300 h-full">
-      <CardHeader>
-        <div className="flex items-center gap-3">
-          <div className="p-2 rounded-md bg-green-500/10 text-green-500">
-            {icon}
-          </div>
-          <CardTitle className="text-xl text-white">{title}</CardTitle>
-        </div>
-      </CardHeader>
-      <CardContent>
-        <CardDescription className="text-zinc-400">
-          {description}
-        </CardDescription>
-      </CardContent>
-    </Card>
-  );
-};
 
 const FeaturesShowcase = () => {
   const features = [
@@ -34,13 +7,13 @@ const FeaturesShowcase = () => {
       icon: <Code size={24} />,
       title: "Custom Challenges",
       description:
-        "Generate personalized coding challenges tailored to your specific learning needs and skill level.",
+        "Generate personalized coding challenges tailored to your specific learning needs and skills level.",
     },
     {
       icon: <Globe size={24} />,
       title: "Multiple Languages",
       description:
-        "Practice in a wide range of programming languages including JavaScript, Python, Java, C++, and more.",
+        "Practice in a wide range of programming languages including JavaScript, Python, Bash, C, and more.",
     },
     {
       icon: <Layers size={24} />,
