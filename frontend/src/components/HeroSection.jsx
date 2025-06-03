@@ -45,7 +45,7 @@ const HeroSection = ({ onGetStarted = () => {} }) => {
     <div className="relative w-full bg-[#0a0e17] text-white overflow-hidden min-h-[700px] flex items-center">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 opacity-10 text-[#00ea64] text-6xl">
+        <div className="absolute top-10 left-10 opacity-10 text-[#00ea64] text-6xl">
           &lt;/&gt;
         </div>
         <div className="absolute bottom-20 right-10 opacity-10 text-[#00ea64] text-6xl">{`{ }`}</div>
@@ -112,7 +112,7 @@ const HeroSection = ({ onGetStarted = () => {} }) => {
             >
               <div className="flex items-center gap-2">
                 <Code className="h-5 w-5 text-[#00ea64]" />
-                <span className="text-gray-300">20+ Languages</span>
+                <span className="text-gray-300">5+ Languages</span>
               </div>
               <div className="flex items-center gap-2">
                 <Terminal className="h-5 w-5 text-[#00ea64]" />
@@ -134,43 +134,55 @@ const HeroSection = ({ onGetStarted = () => {} }) => {
               <pre className="text-sm md:text-base overflow-x-auto">
                 <code className="font-mono">
                   <span className="text-blue-400">def</span>{" "}
-                  <span className="text-[#00ea64]">find_optimal_path</span>
-                  <span className="text-yellow-300">(grid):</span>
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-gray-400">
-                    # Find the most efficient path through the grid
+                  <span className="text-[#00ea64]">binary_search</span>
+                  <span className="text-yellow-300">
+                    (arr: list[int], target: int) -> int:
                   </span>
                   <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-blue-400">if not</span> grid{" "}
-                  <span className="text-blue-400">or not</span> grid[
-                  <span className="text-purple-400">0</span>]:
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-blue-400">return</span>{" "}
-                  <span className="text-purple-400">0</span>
+                  <span className="text-gray-400">"""</span>
                   <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;rows, cols ={" "}
-                  <span className="text-yellow-300">len</span>(grid),{" "}
-                  <span className="text-yellow-300">len</span>(grid[
-                  <span className="text-purple-400">0</span>])
-                  <br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;dp = [[
-                  <span className="text-purple-400">0</span>{" "}
-                  <span className="text-blue-400">for</span> _{" "}
-                  <span className="text-blue-400">in</span>{" "}
-                  <span className="text-yellow-300">range</span>(cols)]{" "}
-                  <span className="text-blue-400">for</span> _{" "}
-                  <span className="text-blue-400">in</span>{" "}
-                  <span className="text-yellow-300">range</span>(rows)]
+                  <span className="text-gray-400">
+                    Find the index of `target` in a sorted list `arr`.
+                  </span>
                   <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;
                   <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;
-                  <span className="text-gray-400"># Your solution here...</span>
+                  <span className="text-gray-400">
+                    :param arr: list of integers in ascending order.
+                  </span>
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="text-gray-400">
+                    :param target: integer value to search for.
+                  </span>
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="text-gray-400">
+                    :returns: index of `target` if found; otherwise, -1.
+                  </span>
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="text-gray-400">
+                    Time Complexity: O(
+                    <span className="text-yellow-300">logn</span>)
+                  </span>
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="text-gray-400">
+                    Space Complexity: O(
+                    <span className="text-yellow-300">1</span>)
+                  </span>
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="text-gray-400">"""</span>
+                  <br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <span className="text-gray-600"># Your solution here...</span>
                 </code>
               </pre>
             </div>
