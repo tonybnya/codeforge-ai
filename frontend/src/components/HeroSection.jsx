@@ -136,7 +136,7 @@ const HeroSection = ({ onGetStarted = () => {} }) => {
                   <span className="text-blue-400">def</span>{" "}
                   <span className="text-[#00ea64]">binary_search</span>
                   <span className="text-yellow-300">
-                    (arr: list[int], target: int) -> int:
+                    (arr: list[int], target: int) -&gt; int:
                   </span>
                   <br />
                   &nbsp;&nbsp;&nbsp;&nbsp;
