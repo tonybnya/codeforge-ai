@@ -27,6 +27,9 @@ const Navbar = () => {
           >
             Challenge Generator
           </a>
+          <a href="contact" className="hover:text-[#1ba94c] transition-colors">
+            Contact
+          </a>
         </nav>
 
         <div className="flex items-center space-x-4">

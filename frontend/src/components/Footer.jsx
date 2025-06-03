@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#070b12] py-12 border-t border-[#2a3142]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="text-[#1ba94c] text-xl font-bold">&lt;/&gt;</div>
@@ -17,51 +17,10 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-medium mb-4 text-white">Product</h4>
+            <h4 className="font-medium mb-4 text-white">CodeForgeAI</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  API
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  Documentation
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-medium mb-4 text-white">Company</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#1ba94c]">
+                <a href="contact" className="hover:text-[#1ba94c]">
                   Contact
                 </a>
               </li>
@@ -72,23 +31,39 @@ const Footer = () => {
             <h4 className="font-medium mb-4 text-white">Connect</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  Twitter
+                <a
+                  href="https://tonybnya-portfolio.onrender.com"
+                  target="_blank"
+                  className="hover:text-[#1ba94c]"
+                >
+                  Portfolio
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#1ba94c]">
+                <a
+                  href="https://github.com/tonybnya"
+                  target="_blank"
+                  className="hover:text-[#1ba94c]"
+                >
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  Discord
+                <a
+                  href="https://www.linkedin.com/in/tonybnya"
+                  target="_blank"
+                  className="hover:text-[#1ba94c]"
+                >
+                  LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#1ba94c]">
-                  LinkedIn
+                <a
+                  href="https://x.com/tonybnya"
+                  target="_blank"
+                  className="hover:text-[#1ba94c]"
+                >
+                  Twitter
                 </a>
               </li>
             </ul>
