@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ClerkProviderWithRoutes from "./auth/ClerkProviderWithRoutes.jsx";
 import ChallengesHistory from "./pages/ChallengesHistory.jsx";
 import Layout from "./pages/Layout.jsx";
@@ -9,7 +9,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Routes>
         <Route path="signin/*" element={<AuthenticationPage />} />
         <Route path="signup" element={<AuthenticationPage />} />
@@ -20,7 +20,7 @@ const App = () => {
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </>
+    </BrowserRouter>
   );
 };
 
