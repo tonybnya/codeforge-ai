@@ -20,22 +20,10 @@ const Navbar = () => {
 
         <nav className="hidden md:flex items-center space-x-8 text-white">
           <a
-            href="#features"
-            className="hover:text-[#1ba94c] transition-colors"
-          >
-            Features
-          </a>
-          <a
-            href="#generator"
+            href="challenge"
             className="hover:text-[#1ba94c] transition-colors"
           >
             Challenge Generator
-          </a>
-          <a
-            href="#testimonials"
-            className="hover:text-[#1ba94c] transition-colors"
-          >
-            Testimonials
           </a>
         </nav>
 
