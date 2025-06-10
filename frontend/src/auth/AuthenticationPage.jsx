@@ -23,7 +23,7 @@ const AuthenticationPage = () => {
   }, [navigate, redirectUrl]);
 
   return (
-    <div className="auth-container bg-[#0d121f] min-h-screen flex flex-col items-center justify-center p-4">
+    <div className="bg-[#0d121f] min-h-screen flex flex-col items-center justify-center p-4">
       <SignedOut>
         {location.pathname.includes("/sign-in") ? (
           <SignIn 
@@ -42,14 +42,14 @@ const AuthenticationPage = () => {
         )}
       </SignedOut>
       <SignedIn>
-        <div className="redirect-message bg-[#1a1a2e] p-6 rounded-lg border border-[#2c2c54] text-white max-w-md w-full">
-          <h2 className="text-xl font-bold mb-2">Already Signed In</h2>
+        <div className="flex flex-col bg-[#1a1a2e] p-6 rounded-lg border border-[#2c2c54] text-white max-w-md w-full">
+          <h2 className="text-xl font-bold mb-2 mx-auto">Already Signed In</h2>
           <p className="mb-4">You are already signed in. Redirecting to the app...</p>
           <button 
             onClick={() => navigate(redirectUrl)} 
-            className="w-full py-2 bg-[#1ba94c] hover:bg-[#158f3e] text-white rounded-md transition-colors"
+            className="w-full py-2 bg-[#1ba94c] hover:bg-[#158f3e] text-white rounded-md transition-colors cursor-pointer"
           >
-            Go to App Now
+            Challenges Generator
           </button>
         </div>
       </SignedIn>

@@ -11,7 +11,7 @@ const ProtectedRoute = () => {
   if (!isLoaded) {
     // Show a loading state while Clerk loads
     return (
-      <div className="loading min-h-screen flex items-center justify-center bg-[#0d121f]">
+      <div className="min-h-screen flex items-center justify-center bg-[#0d121f]">
         <LoadingSpinner size="large" />
       </div>
     );
