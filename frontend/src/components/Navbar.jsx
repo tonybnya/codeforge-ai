@@ -30,6 +30,12 @@ const Navbar = () => {
             >
               Challenge Generator
             </Link>
+            <Link
+              to="/history"
+              className="hover:text-[#1ba94c] transition-colors"
+            >
+              Challenge History
+            </Link>
             {/* <Link */}
             {/*   to="/contact" */}
             {/*   className="hover:text-[#1ba94c] transition-colors" */}
