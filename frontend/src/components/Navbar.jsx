@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { Link, Navigate } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e17]/90 backdrop-blur-sm border-b border-[#2a3142] px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0e17]/90 backdrop-blur-sm border-b border-[#2a3142] px-6 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="/">
+        <Link to="/">
           <div className="flex items-center space-x-2">
             <motion.div
               initial={{ rotate: -10 }}
@@ -18,30 +20,47 @@ const Navbar = () => {
               CodeForge<span className="text-[#1ba94c]">AI</span>
             </h1>
           </div>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center space-x-8 text-white">
-          <a
-            href="challenge"
-            className="hover:text-[#1ba94c] transition-colors"
-          >
-            Challenge Generator
-          </a>
-          <a href="contact" className="hover:text-[#1ba94c] transition-colors">
-            Contact
-          </a>
+          <SignedIn>
+            <Link
+              to="/challenge"
+              className="hover:text-[#1ba94c] transition-colors"
+            >
+              Challenge Generator
+            </Link>
+            {/* <Link */}
+            {/*   to="/contact" */}
+            {/*   className="hover:text-[#1ba94c] transition-colors" */}
+            {/* > */}
+            {/*   Contact */}
+            {/* </Link> */}
+          </SignedIn>
         </nav>
 
         <div className="flex items-center space-x-4">
-          <button className="px-4 py-2 text-sm font-medium text-white hover:text-[#1ba94c] transition-colors cursor-pointer">
-            Login
-          </button>
-          <button className="px-4 py-2 text-sm font-medium bg-[#1ba94c] hover:bg-[#158f3e] rounded-md transition-colors cursor-pointer">
-            Sign Up
-          </button>
+          <SignedOut>
+            <Link
+              to="/sign-in"
+              className="px-4 py-2 text-sm font-medium text-white hover:text-[#1ba94c] transition-colors cursor-pointer"
+            >
+              Login
+            </Link>
+            <Link
+              to="/sign-up"
+              className="px-4 py-2 text-sm font-medium bg-[#1ba94c] hover:bg-[#158f3e] rounded-md transition-colors cursor-pointer"
+            >
+              Sign Up
+            </Link>
+          </SignedOut>
+
+          <SignedIn>
+            <UserButton afterSignOutUrl="/sign-in" />
+          </SignedIn>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 

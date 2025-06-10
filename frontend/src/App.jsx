@@ -1,21 +1,22 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import ClerkProviderWithRoutes from "./auth/ClerkProviderWithRoutes.jsx";
+import AuthenticationPage from "./auth/AuthenticationPage.jsx";
 import ChallengeGenerator from "./pages/ChallengeGenerator.jsx";
 import ChallengeHistory from "./pages/ChallengeHistory.jsx";
+import ClerkProviderWithRoutes from "./auth/ClerkProviderWithRoutes.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
-import Thanks from "./pages/Thanks.jsx";
-import Layout from "./pages/Layout.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
+import Layout from "./pages/Layout.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
-import AuthenticationPage from "./auth/AuthenticationPage.jsx";
+import Thanks from "./pages/Thanks.jsx";
 import "./App.css";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <ClerkProviderWithRoutes>
+      {/* <BrowserRouter> */}
       <Routes>
-        <Route path="signin/*" element={<AuthenticationPage />} />
-        <Route path="signup" element={<AuthenticationPage />} />
+        <Route path="sign-in/*" element={<AuthenticationPage />} />
+        <Route path="sign-up" element={<AuthenticationPage />} />
         <Route element={<Layout />}>
           <Route index element={<LandingPage />} />
           <Route path="home" element={<LandingPage />} />
@@ -26,7 +27,8 @@ const App = () => {
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-    </BrowserRouter>
+      {/* </BrowserRouter> */}
+    </ClerkProviderWithRoutes>
   );
 };
 
