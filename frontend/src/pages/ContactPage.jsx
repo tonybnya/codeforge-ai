@@ -133,7 +133,7 @@ const LandingContact = ({ className = "", onSubmit }) => {
         <div className="flex items-center justify-center">
           <Button
             type="submit"
-            className="w-full md:w-[50%] bg-[#ec6d51] hover:cursor-pointer hover:scale-105"
+            className="w-full md:w-[50%] !bg-[#1ba94c] hover:!bg-[#158f3e] hover:cursor-pointer hover:scale-105"
           >
             <Send className="mr-2 h-4 w-4" /> Send
           </Button>

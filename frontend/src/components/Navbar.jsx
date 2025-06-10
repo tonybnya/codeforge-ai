@@ -33,10 +33,10 @@ const Navbar = () => {
         </nav>
 
         <div className="flex items-center space-x-4">
-          <button className="px-4 py-2 text-sm font-medium text-white hover:text-[#1ba94c] transition-colors">
+          <button className="px-4 py-2 text-sm font-medium text-white hover:text-[#1ba94c] transition-colors cursor-pointer">
             Login
           </button>
-          <button className="px-4 py-2 text-sm font-medium bg-[#1ba94c] hover:bg-[#158f3e] rounded-md transition-colors">
+          <button className="px-4 py-2 text-sm font-medium bg-[#1ba94c] hover:bg-[#158f3e] rounded-md transition-colors cursor-pointer">
             Sign Up
           </button>
         </div>
