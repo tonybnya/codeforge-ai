@@ -1,19 +1,23 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-[#070b12] py-12 border-t border-[#2a3142]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="text-[#1ba94c] text-xl font-bold">&lt;/&gt;</div>
-              <h3 className="text-lg font-bold text-white">
-                CodeForge<span className="text-[#1ba94c]">AI</span>
-              </h3>
-            </div>
-            <p className="text-gray-400 text-sm">
-              Elevate your coding skills with AI-generated challenges tailored
-              to your needs.
-            </p>
+              <Link to="/">
+                <div className="flex items-center space-x-2 mb-4">
+                  <div className="text-[#1ba94c] text-xl font-bold">&lt;/&gt;</div>
+                  <h3 className="text-lg font-bold text-white">
+                    CodeForge<span className="text-[#1ba94c]">AI</span>
+                  </h3>
+                </div>
+              </Link>
+              <p className="text-gray-400 text-sm">
+                Elevate your coding skills with AI-generated challenges tailored
+                to your needs.
+              </p>
           </div>
 
           <div>
@@ -72,7 +76,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-[#2a3142] flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} CodeForge AI. All rights reserved.
+            © {new Date().getFullYear()} CodeForgeAI. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-sm text-gray-500 hover:text-[#1ba94c]">
