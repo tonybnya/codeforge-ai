@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Terminal } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useAuth } from "@clerk/clerk-react";
 
 const HeroSection = ({ onGetStarted = () => {} }) => {
+  const { isSignedIn } = useAuth();
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -89,18 +92,20 @@ const HeroSection = ({ onGetStarted = () => {} }) => {
               variants={itemVariants}
               className="flex flex-wrap gap-4"
             >
-              <Button
-                onClick={onGetStarted}
-                size="lg"
-                className="bg-[#00ea64] hover:bg-[#00c853] text-black font-medium px-8 py-6 rounded-md text-lg"
-              >
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link to={isSignedIn ? "/challenge" : "/sign-in?redirect_url=/challenge"}>
+                <Button
+                  onClick={onGetStarted}
+                  size="lg"
+                  className="bg-[#00ea64] hover:bg-[#00c853] text-black font-medium px-8 py-6 rounded-md text-lg cursor-pointer"
+                >
+                  {isSignedIn ? "Start Coding" : "Get Started"} <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
 
               <Button
-                variant="outline"
+                // variant="outline"
                 size="lg"
-                className="border-[#00ea64] text-[#00ea64] hover:bg-[#00ea64]/10 px-8 py-6 rounded-md text-lg"
+                className="text-white !bg-[#1ba94c] hover:!bg-[#158f3e] px-8 py-6 rounded-md text-lg cursor-pointer"
               >
                 Learn More
               </Button>
