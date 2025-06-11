@@ -102,13 +102,15 @@ const HeroSection = ({ onGetStarted = () => {} }) => {
                 </Button>
               </Link>
 
-              <Button
-                // variant="outline"
-                size="lg"
-                className="text-white !bg-[#1ba94c] hover:!bg-[#158f3e] px-8 py-6 rounded-md text-lg cursor-pointer"
-              >
-                Learn More
-              </Button>
+              <a href="#features">
+                <Button
+                  // variant="outline"
+                  size="lg"
+                  className="text-white !bg-[#1ba94c] hover:!bg-[#158f3e] px-8 py-6 rounded-md text-lg cursor-pointer"
+                >
+                  Learn More
+                </Button>
+              </a>
             </motion.div>
 
             <motion.div
