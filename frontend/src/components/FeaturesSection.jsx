@@ -74,7 +74,7 @@ const FeaturesShowcase = () => {
           <Link to={isSignedIn ? "/challenge" : "/sign-in?redirect_url=/challenge"}>
             <Button
               size="lg"
-              className="bg-[#00ea64] hover:bg-[#00c853] text-black font-medium px-8 py-6 rounded-md text-lg cursor-pointer"
+              className="!bg-[#1ba94c] hover:!bg-[#158f3e] text-black font-medium px-8 py-6 rounded-md text-lg cursor-pointer"
             >
               {isSignedIn ? "Try a Challenge Now" : "Sign Up & Start Coding"} <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
