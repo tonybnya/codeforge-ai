@@ -124,7 +124,7 @@ Clerk components like `<SignedIn>` and `<SignedOut>` are used to conditionally r
   </SignedOut>
 
   <SignedIn>
-    <UserButton afterSignOutUrl="/sign-in" />
+    <UserButton afterSignOutUrl="/" />
   </SignedIn>
 </div>
 ```
@@ -144,4 +144,22 @@ VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
 3. Store sensitive keys in environment variables
 4. Include loading states for better user experience
 5. Handle post-authentication redirection properly
+
+## Sign-Out Best Practices
+
+When implementing sign-out functionality, it's best to redirect users to the landing page rather than the sign-in page for the following reasons:
+
+1. **Better User Experience**: When users sign out, they're explicitly choosing to end their session. Redirecting to the landing page feels less pushy than immediately asking them to sign back in.
+
+2. **Showcases Your Product**: The landing page highlights your product's features and value, which can remind users why they signed up in the first place.
+
+3. **Reduces Confusion**: New users might be confused if they sign out and are immediately taken to a sign-in page, wondering if they actually signed out successfully.
+
+4. **Industry Standard**: Most major applications redirect to their landing page after sign-out rather than back to the sign-in page.
+
+In this application, we implement this by setting the `afterSignOutUrl` prop of the Clerk `UserButton` component to the root path (`/`):
+
+```jsx
+<UserButton afterSignOutUrl="/" />
+```
 

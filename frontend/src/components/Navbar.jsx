@@ -67,7 +67,7 @@ const Navbar = () => {
             </SignedOut>
 
             <SignedIn>
-              <UserButton afterSignOutUrl="/sign-in" />
+              <UserButton afterSignOutUrl="/" />
             </SignedIn>
           </div>
           
@@ -134,7 +134,7 @@ const Navbar = () => {
             <SignedIn>
               <div className="pt-2 border-t border-[#2a3142] flex items-center">
                 <span className="text-gray-400 mr-2">Account:</span>
-                <UserButton afterSignOutUrl="/sign-in" />
+                <UserButton afterSignOutUrl="/" />
               </div>
             </SignedIn>
           </div>
